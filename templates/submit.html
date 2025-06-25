@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block content %}
+  <!-- Submit Form -->
+   <style>
+        body {
+        background-color: #fff0f5; /* light pink */
+        }
+        .form-container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: white;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-label {
+        font-weight: bold;
+        }
+        .btn-pink {
+        background-color: #ea4b80;
+        color: white;
+        }
+        .btn-pink:hover {
+        background-color: #e14f89;
+        }
+    </style>
+
+  <div class="form-container mt-5">
+    <h2 class="text-center text-danger mb-4">💬 Share Your Story Anonymously</h2>
+    <form method="POST">
+      <div class="mb-3">
+        <label for="story" class="form-label">Your story</label>
+        <textarea name="story" id="story" rows="6" class="form-control" placeholder="Write from the heart..." required></textarea>
+      </div>
+      <div class="d-grid">
+        <button type="submit" class="btn btn-pink">Submit </button>
+      </div>
+    </form>
+  </div>
+  {% endblock %}
+    

@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container mt-4">
+  <h2 class="mb-4 text-center text-danger">💌 Shared Period Stories</h2>
+
+  {% for story in stories %}
+    <div class="card p-3 mb-4">
+      <p class="card-text">{{ story.content }}</p>
+      <p class="timestamp text-muted">Posted on: {{ story.timestamp.strftime('%d %B %Y, %I:%M %p') }}</p>
+
+      <div class="d-flex justify-content-between align-items-center">
+        <!-- Like Button -->
+        <form method="POST" action="/like/{{ story.id }}">
+          <button type="submit" class="btn btn-outline-danger btn-sm">
+            ❤️ Like ({{ story.likes }})
+          </button>
+        </form>
+
+        <!-- Comment Dropdown Button -->
+        <button class="btn btn-sm btn-outline-danger" type="button" data-bs-toggle="collapse" data-bs-target="#comments-{{ story.id }}">
+          💬 View/Add Comments
+        </button>
+      </div>
+
+      <!-- Dropdown Section for Comments -->
+      <div class="collapse mt-3" id="comments-{{ story.id }}">
+        {% if story.comments %}
+          <div class="ps-2 border-start border-danger mb-2">
+            <h6 class="text-muted">Comments:</h6>
+            {% for comment in story.comments %}
+              <p class="mb-1">💬 {{ comment.comment_text }}</p>
+            {% endfor %}
+          </div>
+        {% else %}
+          <p class="text-muted">No comments yet. Be the first 💖</p>
+        {% endif %}
+
+        <!-- Add Comment Form -->
+        <form method="POST" action="/comment/{{ story.id }}">
+          <div class="input-group">
+            <input type="text" name="comment" class="form-control" placeholder="Add a comment..." required>
+            <button class="btn btn-outline-danger" type="submit">Post</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  {% else %}
+    <p class="text-center">No stories yet. Be the first to share yours 💖</p>
+  {% endfor %}
+</div>
+{% endblock %}

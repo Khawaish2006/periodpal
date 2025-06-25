@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2 class="text-center text-danger mb-4">📚 Myths in {{ category }} Category</h2>
+
+{% if myths %}
+  {% for myth in myths %}
+    <div class="card p-3 mb-3 shadow-sm">
+      <p><strong>🧱 Myth:</strong> {{ myth.myth_text }}</p>
+      <p><strong>✅ Fact:</strong> {{ myth.fact_text }}</p>
+      <p class="text-muted"><small>Added on {{ myth.timestamp.strftime('%d %B %Y') }}</small></p>
+    </div>
+  {% endfor %}
+{% else %}
+  <p class="text-center text-muted">No myths added in this category yet.</p>
+{% endif %}
+
+<div class="text-center mt-4">
+  <a href="/myths" class="btn btn-outline-dark">⬅ Back to Categories</a>
+</div>
+{% endblock %}

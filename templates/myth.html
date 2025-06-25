@@ -1,0 +1,39 @@
+
+
+   {% extends "base.html" %}
+    <!-- Main content -->
+     
+     {% block content %}
+     <style>
+        body {
+            background-color: #f8f9fa; /* Light background */
+        }
+        .category-btn {
+            background-color: #f36091; /* Pink */
+            color: white;
+            font-weight: bold;
+            width: 100%;
+        }
+        .category-btn:hover {
+            background-color: #df4185; /* Darker pink on hover */
+        }
+        </style>
+    <div class="container text-center mt-5">
+        <h1 class="text-danger mb-4">🧠 Period Myth Buster Wall</h1>
+        <p class="text-muted"> <h6>Let’s bust those age-old myths and spread awareness 💬✨ </h6></p>
+
+        <div class="row justify-content-center mt-4">
+            <div class="col-md-3 mb-3">
+                <a href="/myths/Health"  class="btn btn-pink w-100">💪 Health</a>
+            </div>
+            <div class="col-md-3 mb-3">
+                <a href="/myths/Culture"  class="btn btn-outline-dark w-100">🧕 Culture</a>
+            </div>
+            <div class="col-md-3 mb-3">
+                <a href="/myths/Food" class="btn btn-pink w-100">🍱 Food</a>
+            </div>
+        </div>
+    </div>
+
+
+    {% endblock %}
