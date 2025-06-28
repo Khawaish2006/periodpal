@@ -4,8 +4,8 @@
 It’s created to help people **share their period experiences** and **bust common myths** around menstruation.
 
 ---
-Landingpage ("https://github.com/Khawaish2006/periodpal/blob/main/Screenshot%202025-06-25%20205903.png")
 
+![Landing Page](https://github.com/Khawaish2006/periodpal/blob/main/Screenshot%202025-06-25%20205903.png)
 ## 💡 Features
 
 ### 📝 Share Your Story
