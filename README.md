@@ -6,6 +6,9 @@ It’s created to help people **share their period experiences** and **bust comm
 ---
 
 ![Landing Page](https://github.com/Khawaish2006/periodpal/blob/main/Screenshot%202025-06-25%20205903.png)
+![Landing Page](https://github.com/Khawaish2006/periodpal/blob/main/Screenshot%202025-06-25%20205936.png)
+![Landing Page](https://github.com/Khawaish2006/periodpal/blob/main/Screenshot%202025-07-12%20233906.png)
+![Landing Page](https://github.com/Khawaish2006/periodpal/blob/main/Screenshot%202025-07-12%20233845.png)
 ## 💡 Features
 
 ### 📝 Share Your Story
